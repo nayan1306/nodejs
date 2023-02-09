@@ -1,0 +1,24 @@
+{
+  "name": "my_package",
+  "version": "1.0.0",
+  "description": "trial package 1",
+  "main": "1_basics.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nayan Verma",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "nodemon": "^2.0.20"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nayan1306/nodejs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nayan1306/nodejs/issues"
+  },
+  "homepage": "https://github.com/nayan1306/nodejs#readme"
+}

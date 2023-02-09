@@ -1,0 +1,23 @@
+{
+  "name": "simple_api",
+  "version": "1.0.0",
+  "description": "This is my first api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nayan1306/nodejs.git"
+  },
+  "author": "Nayan Verma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nayan1306/nodejs/issues"
+  },
+  "homepage": "https://github.com/nayan1306/nodejs#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "fs": "^0.0.1-security"
+  }
+}

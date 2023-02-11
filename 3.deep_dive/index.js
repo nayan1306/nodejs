@@ -1,16 +1,10 @@
-// Crud operations
-const fs = require("fs");
-const path = require("path");
-const dirpath = path.join(__dirname,"crud");
-const filepath = `${dirpath}/content.txt`;
+// Dealing with html
+const express = require('express');
+const path = require('path');
+const app = express();
 
-// fs.writeFileSync(filepath,"This is some content.");
+const publicpath = path.join(__dirname,'public');
 
-// fs.readFile(filepath,'utf-8',(err,item)=>{
-//     console.log(item);
-// })
+app.use(express.static(publicpath));
 
-
-fs.appendFile(filepath,' this is a text added to the previous text.',(err)=>{
-    if(!err) console.log("File is updated.")
-})
+app.listen(4500);

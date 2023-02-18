@@ -1,16 +1,31 @@
-// Crud operations
-const fs = require("fs");
-const path = require("path");
-const dirpath = path.join(__dirname,"crud");
-const filepath = `${dirpath}/content.txt`;
+const express = require('express');
+const app = express();
 
-// fs.writeFileSync(filepath,"This is some content.");
+const reqFilter = (req,resp,next)=>{
+    if(!req.query.age){
+        resp.send("Please provide your age")
+    }
+    else if(req.query.age<18){
+        resp.send("You are under age")
+    }
+    else{
+        next();
+    }
+}
 
-// fs.readFile(filepath,'utf-8',(err,item)=>{
-//     console.log(item);
-// })
+app.use(reqFilter);
 
-
-fs.appendFile(filepath,' this is a text added to the previous text.',(err)=>{
-    if(!err) console.log("File is updated.")
+app.get('/',(_,resp)=>{
+    resp.send('Welcome to home page.')
 })
+
+app.get('/help',(_,resp)=>{
+    resp.send('Welcome to HELP page.')
+})
+
+
+app.get('*',(_,resp)=>{
+    resp.send('404')
+})
+
+app.listen(4500);
